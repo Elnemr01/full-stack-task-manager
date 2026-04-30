@@ -26,8 +26,9 @@
         localStorage.setItem("user", JSON.stringify(data.data.data.user));
         setUser(data.data.data.user);
         },
-        onError: () => {
-        toast.error("Login failed");
+        onError: (error) => {
+            // console.log(error)
+            toast.error("Login failed");
         },
     });
 
